@@ -9,11 +9,12 @@ jobs:
   deploy_live_website:
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v2
+      # Must touch after checkout or the file will not available
       - run: |
           touch .env
           echo ${{ secrets.PRODUCTION_ENV }} >> .env
-          cat .env      
-      - uses: actions/checkout@v2
+          cat .env 
       - run: yarn && yarn build
       - uses: FirebaseExtended/action-hosting-deploy@v0
         with:
