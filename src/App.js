@@ -7,7 +7,8 @@ function App() {
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
-          This is alpha release. Stay home stay safe.
+          VietNam quyet tam chien thang dai dich Covid. <br />
+          Key: {process.env.REACT_APP_KEY}
         </p>
         <a
           className="App-link"
