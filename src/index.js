@@ -3,6 +3,9 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import dotenv from 'dotenv';
+
+dotenv.config({ path: `.env.${process.env.NODE_ENV}` });
 
 ReactDOM.render(
   <React.StrictMode>
